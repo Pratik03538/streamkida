@@ -696,7 +696,7 @@ class HumanCommentator:
             return "King escape squares."
 
         if f["next_move"]:
-            return f["Next engine idea: {f['next_move']}."
+            return f"Next engine idea: {f['next_move']}."
 
         return "Opponent's next tempo."
 
