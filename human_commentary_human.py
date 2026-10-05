@@ -777,8 +777,8 @@ class HumanCommentator:
     # ------------------------------------------------------------------
 
     def _opener(self) -> str:
-        if self.rng.random() < 0.22:
-            return ""
+        # Never return an empty opener here because some sentence templates
+        # intentionally include the comma after the opener.
         return self._pick(OPENERS)
 
     def _join(self, a: str, b: str) -> str:
