@@ -17,7 +17,7 @@ import chess
 import chess.engine
 import chess.pgn
 
-from human_commentary import EngineSnapshot, make_commentary
+from human_commentary_human import EngineSnapshot, make_commentary
 
 
 PGN_TEXT = r'''
@@ -111,7 +111,7 @@ def pv_to_san(board: chess.Board, pv: list[chess.Move], count: int = 5) -> str:
 def main() -> None:
     print("=" * 86)
     print("        STREAMKIDA - LOCAL HUMAN COMMENTARY TRIAL")
-    print("        STOCKFISH + OWN RULE ENGINE | NO AI")
+    print("        STOCKFISH + OWN HUMAN VOICE ENGINE | NO AI")
     print("=" * 86)
 
     game = chess.pgn.read_game(io.StringIO(PGN_TEXT))
